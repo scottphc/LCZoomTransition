@@ -133,11 +133,11 @@
     CGRect masterTopEndFrame = masterTopView.frame;
     CGRect masterBottomEndFrame = masterBottomView.frame;
     if (self.operation == UINavigationControllerOperationPush) {
-        masterTopEndFrame.origin.y = -(masterTopEndFrame.size.height - sourceRect.size.height);
+        masterTopEndFrame.origin.y = -(masterTopEndFrame.size.height);
         masterBottomEndFrame.origin.y += masterBottomEndFrame.size.height;
     } else {
         CGRect masterTopStartFrame = masterTopView.frame;
-        masterTopStartFrame.origin.y = -(masterTopStartFrame.size.height - sourceRect.size.height);
+        masterTopStartFrame.origin.y = -(masterTopStartFrame.size.height);
         masterTopView.frame = masterTopStartFrame;
         
         CGRect masterBottomStartFrame = masterBottomView.frame;
